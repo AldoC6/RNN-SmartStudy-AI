@@ -2,3 +2,7 @@ venv/
 __pycache__/
 *.pyc
 .env
+
+modelo_estudio.h5
+
+dataset.csv
