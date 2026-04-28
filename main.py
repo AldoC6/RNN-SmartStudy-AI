@@ -62,10 +62,13 @@ def predict(data: InputData):
         data.tasks
     ]])
 
-    pred = model.predict(entrada)
+    pred_prioridad, pred_horas = model.predict(entrada)
 
-    prioridad = int(round(pred[0][0]))
-    horas_recomendadas = float(pred[0][1])
+    # 🔥 prioridad = índice con mayor probabilidad
+    prioridad = int(np.argmax(pred_prioridad[0]))
+
+    # 🔥 horas (ya es número)
+    horas_recomendadas = float(pred_horas[0][0])
 
     return {
         "prioridad": prioridad,
