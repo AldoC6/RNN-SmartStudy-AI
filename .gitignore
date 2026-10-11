@@ -6,3 +6,4 @@ __pycache__/
 modelo_estudio.h5
 
 dataset.csv
+modelo_lstm.h5
